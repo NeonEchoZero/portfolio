@@ -1,59 +1,50 @@
-# Blockchain Infrastructure Monitoring Portfolio
+# Infrastructure Portfolio
 
-This repository contains a suite of some of my custom-built tools designed to solve specific challenges in blockchain infrastructure monitoring.
+A suite of custom-built tools designed to solve specific challenges in infrastructure monitoring and management.
 
-### 🛠️ Tools Collection
+## 🛠️ Tools Collection
 
 | Tool | Ecosystem | Language | Description |
 |------|-----------|----------|-------------|
-| [Ethereum Network Identifier](#ethereum-network-identifier) | Ethereum | Go | Identifies Ethereum networks via P2P protocol handshakes |
-| [Ethereum Bootstrap Monitor](#ethereum-bootstrap-monitor) | Ethereum | Go | Monitors Ethereum bootnode peer discovery |
-| [Node Uptime & Health Checker](#node-uptime--health-checker) | Cosmos | Python | Comprehensive node monitoring with alerting |
-| [Node Health Dashboard](#node-health-dashboard) | Cosmos | React/JavaScript | Frontend dashboard for the Node Uptime & Health Checker |
-| [Cosmos Micro](#cosmos-micro) | Cosmos | Python | Lightweight node health monitoring microservice |
-| [BitcoinEVM](#bitcoinevm) | Bitcoin/EVM | Go | Secure Bitcoin asset management for EVM chain validators |
+| [Ethereum Network Identifier](./idcheck.md) | Ethereum | Go | Identifies Ethereum networks via P2P protocol handshakes |
+| [Ethereum Bootstrap Monitor](./EthereumBootstrapMonitor.md) | Ethereum | Go | Monitors Ethereum bootnode peer discovery |
+| [Node Uptime & Health Checker](./Node_Uptime_and_Health_Checker.md) | Cosmos | Python | Comprehensive node monitoring with alerting |
+| [Node Health Dashboard](./Node_Uptime_and_Health_Checker-frontend.md) | Cosmos | React/JavaScript | Frontend dashboard for the Node Uptime & Health Checker |
+| [Cosmos Micro](./cosmosmicro.md) | Cosmos | Python | Lightweight node health monitoring microservice |
+| [P2P Network Visualizer](./eth-map.md) | Ethereum | React/JavaScript | Interactive visualization of P2P network metrics |
 
-## Ethereum Network Identifier
+## 🌟 Featured Projects
 
-A lightweight Go tool for identifying which Ethereum network a node is operating on by performing P2P protocol handshakes.
+### Ethereum Network Identifier
 
-### Key Features
+A lightweight Go tool for identifying which Ethereum network a node is operating on by performing P2P protocol handshakes. Implements the complete Ethereum P2P protocol handshake sequence to determine if a node belongs to Mainnet, Sepolia, Holesky, or other networks.
+
+**Key Features:**
 - Implements complete Ethereum P2P protocol handshake sequence
 - Supports all major Ethereum networks (Mainnet, Sepolia, Holesky, etc.)
 - Handles protocol negotiation with nodes supporting multiple versions
 - Provides detailed connection and handshake information
 
-### Use Cases
-- Verify network identity of peer nodes before connecting
-- Troubleshoot connectivity issues between networks
-- Validate correct network deployment
+[View Details](./idcheck.md)
 
-[View Project Details](./idcheck.md)
+### Ethereum Bootstrap Monitor
 
-## Ethereum Bootstrap Monitor
+A specialized Go tool for monitoring Ethereum bootnode peer discovery and network health through Discv4 protocol interactions. Tracks peer discovery across Kademlia buckets, monitors bootnode responsiveness, and exports comprehensive Prometheus metrics.
 
-A specialized Go tool for monitoring Ethereum bootnode peer discovery and network health through Discv4 protocol interactions.
-
-### Key Features
+**Key Features:**
 - Tracks peer discovery across Kademlia buckets
 - Monitors bootnode responsiveness and peer availability
 - Exports comprehensive Prometheus metrics
 - Tracks specific IP addresses for network monitoring
 - Configurable discovery parameters
 
-### Use Cases
-- Bootnode health monitoring
-- Network connectivity validation
-- Peer discovery troubleshooting
-- Network growth analysis
+[View Details](./EthereumBootstrapMonitor.md)
 
-[View Project Details](./EthereumBootstrapMonitor.md)
-
-## Node Uptime & Health Checker
+### Node Uptime & Health Checker
 
 A comprehensive monitoring solution for Cosmos-based blockchain nodes with integrated alerting, metrics, and status dashboard capabilities.
 
-### Key Features
+**Key Features:**
 - Multi-node monitoring across different networks
 - Real-time status dashboard via API endpoints
 - Intelligent alerting via Telegram and Pushover
@@ -61,19 +52,13 @@ A comprehensive monitoring solution for Cosmos-based blockchain nodes with integ
 - Prometheus metrics integration
 - Configurable thresholds and maintenance mode
 
-### Use Cases
-- Production node infrastructure monitoring
-- DevOps integrations for high availability
-- Network status visualization
-- Alert management for operations teams
+[View Details](./Node_Uptime_and_Health_Checker.md)
 
-[View Project Details](./Node_Uptime_and_Health_Checker.md)
-
-## Node Health Dashboard
+### Node Health Dashboard
 
 A modern React-based frontend for the Node Uptime & Health Checker service, providing a real-time visual interface to monitor blockchain node health across multiple networks.
 
-### Key Features
+**Key Features:**
 - Real-time node status monitoring with auto-refresh
 - Multi-network support with organized display
 - Status visualization with color-coded indicators
@@ -81,61 +66,56 @@ A modern React-based frontend for the Node Uptime & Health Checker service, prov
 - Alert management with pause functionality
 - Responsive design for desktop and mobile
 
-### Use Cases
-- Operations center monitoring displays
-- DevOps team status monitoring
-- Quick health assessment during incidents
-- Remote node monitoring from any device
+[View Details](./Node_Uptime_and_Health_Checker-frontend.md)
 
-[View Project Details](./Node_Uptime_and_Health_Checker-frontend.md)
-
-## Cosmos Micro
+### Cosmos Micro
 
 A lightweight health monitoring microservice for Cosmos-based blockchain nodes, designed for integration with container orchestration and load balancers.
 
-### Key Features
+**Key Features:**
 - Node health monitoring with sync status checking
 - Version reporting of blockchain daemon
 - Response caching for efficiency
 - Configurable synchronization thresholds
 - RESTful API for monitoring integration
 
-### Use Cases
-- Kubernetes liveness/readiness probes
-- Load balancer health checks
-- Microservice architecture integration
-- Simple health monitoring
+[View Details](./cosmosmicro.md)
 
-[View Project Details](./cosmosmicro.md)
+### P2P Network Visualizer
 
-## BitcoinEVM
+An interactive React-based visualization tool for Ethereum P2P network metrics. Provides real-time network topology visualization, geographic distribution maps, and comprehensive analytics for peer discovery and network health monitoring.
 
-A sophisticated system designed to allow validators on a custom EVM chain to securely control Bitcoin assets using Intel SGX enclaves.
+**Key Features:**
+- Interactive network topology graph with force-directed simulation
+- Geographic map showing global peer distribution
+- Time-series analysis of network performance metrics
+- Peer type distribution and reliability statistics
+- Integration with Ethereum Bootstrap Monitor metrics
 
-### Key Features
-- Secure key management using SGX enclaves
-- Threshold cryptography with n-of-m signing
-- Transaction signing for Bitcoin triggered by EVM smart contracts
-- Cryptographic attestation of enclave integrity
-- Phased implementation approach from testnet to multi-node mainnet
+[View Details](./eth-map.md)
 
-### Use Cases
-- Cross-chain asset management
-- Trustless Bitcoin bridging to EVM chains
-- Secure multi-party transaction signing
-- Decentralized custody solutions
-
-[View Project Details](./BitcoinEVM.md)
 
 ## 💻 Technology Stack
 
-These projects covers proficiency with the following technologies:
+This portfolio leverages the following technologies:
 
 - **Languages**: Go, Python, JavaScript/React
 - **Blockchain Ecosystems**: Ethereum, Cosmos, Bitcoin
 - **Monitoring Tools**: Prometheus, Grafana
+- **Visualization**: React, D3.js, Recharts, React Simple Maps
 - **Alerting Systems**: Telegram, Pushover
 - **Web Frameworks**: FastAPI, React
 - **Security Technologies**: Intel SGX, Threshold Cryptography
 - **Protocols**: Ethereum P2P, DevP2P, RLPx, Discv4, Cosmos RPC, Bitcoin transactions
 - **Deployment**: Systemd, Ansible, Docker
+
+## 📊 Use Cases
+
+These tools are designed for infrastructure operators, developers, and researchers who need:
+
+- Network health monitoring and alerting for validators and nodes
+- Peer discovery and network topology analysis
+- Cross-chain communication and asset management
+- Visual insights into distributed network behavior
+- Integration with existing monitoring stacks (Prometheus/Grafana)
+- Secure cross-chain asset management
